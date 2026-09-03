@@ -72,4 +72,18 @@ def find_Word():
     return -1          
 
 find_Word()
+# find even numbers from a file 
 
+f = open("numbers.txt","w")
+f.write("1,2,3,4,5,6,7,8,9,10")
+f.close()
+
+with open("numbers.txt","r") as f:
+    data = f.read()
+    numbers = data.split(",")
+    even_numbers = []
+    for num in numbers:
+        if int(num) % 2 == 0:
+            even_numbers.append(num)
+    print("Even numbers are: ",even_numbers)
+    print("Total even numbers are: ",len(even_numbers))
