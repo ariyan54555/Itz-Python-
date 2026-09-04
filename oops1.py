@@ -8,3 +8,11 @@ print(s1.name)
 
 s2 = Student()
 print(s2.name)
+
+class Car:
+    colour = "Blue"
+    brand = "Marcedes"
+
+c1 = Car()
+print(c1.colour)
+print(c1.brand)
