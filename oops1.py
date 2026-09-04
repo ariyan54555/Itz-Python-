@@ -16,3 +16,11 @@ class Car:
 c1 = Car()
 print(c1.colour)
 print(c1.brand)
+
+#creating constructor
+
+class Bike:
+    def __init__(self):
+        print("This is constructor")
+
+b1 = Bike()
