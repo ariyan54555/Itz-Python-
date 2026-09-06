@@ -19,4 +19,22 @@ class Account:
 a1 = Account("Aeiyan")
 print(a1.welcome())
 
+#Inheritence
+class Car:
+    @staticmethod
+    def start():
+        print("Car started...")
+    def stop():
+        print("Car stopped...")
+class ToyotaCar(Car):
+    def __init__(self,name):
+        self.name = name
+
+car1 = ToyotaCar("Fortuner")
+car2 = ToyotaCar("Prius")
+
+print(car1.name)
+print(car1.start())
+
+
 
