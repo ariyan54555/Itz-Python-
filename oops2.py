@@ -8,3 +8,15 @@ print(s1.name)
 
 # private attribute and method
 
+class Account:
+    def __init__(self,name):
+        self.__name = name
+
+    def __hello(self):
+        print("Heloo")
+    def welcome(self):
+        self.__hello()
+a1 = Account("Aeiyan")
+print(a1.welcome())
+
+
