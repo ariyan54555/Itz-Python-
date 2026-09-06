@@ -69,6 +69,39 @@ print(stu.percentage)
 stu = Student1(90,99,95)
 print(stu.percentage)
 
+#practice question
+
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+
+    def area(self):
+        return (22/7)*self.radius**2
+    def perimeter(self):
+        return 2*(22/7)*self.radius
+
+c = Circle(1)
+print(c.area())
+print(c.perimeter())
+
+#practice 2
+
+class Employee:
+    def __init__(self,role,dept,salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
+    def showDetails(self):
+        print("Role =",self.role)
+        print("Dept =",self.dept)
+        print("Salary =",self.salary)
+class Engineer(Employee):
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        super().__init__("Engineer","IT","750000")
+e1 = Employee("accountant","Finance","60000")
+e1.showDetails()
 
 
 
