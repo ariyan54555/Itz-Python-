@@ -21,6 +21,7 @@ print(a1.welcome())
 
 #Inheritence
 class Car:
+    color = "Black"
     @staticmethod
     def start():
         print("Car started...")
@@ -30,11 +31,44 @@ class ToyotaCar(Car):
     def __init__(self,name):
         self.name = name
 
-car1 = ToyotaCar("Fortuner")
-car2 = ToyotaCar("Prius")
+class Fortuner(ToyotaCar):
+    def __init__(self,type,name):
+        self.type = type
+        super().__init__(name)
 
-print(car1.name)
-print(car1.start())
+
+car1 = Fortuner("Dissel","Fortuner")
+car1.start()
+
+#Multiple inheritance
+
+class A:
+    varA ="Welcome to class A"
+class B:
+    varB = "Welcome to class B"
+class C(A,B):
+    varC = "Welcome to class C"
+c1 = C()
+print(c1.varA,c1.varC,c1.varB)
+
+#use of property
+
+class Student1:
+    def __init__(self,phy,chem,math):
+        self.phy = phy 
+        self.chem = chem
+        self.math = math
+
+    @property
+    def percentage(self):
+        return str((self.phy+self.math+self.chem)/3)+"%"
+
+stu = Student1(98,99,95)
+print(stu.percentage)
+
+stu = Student1(90,99,95)
+print(stu.percentage)
+
 
 
 
