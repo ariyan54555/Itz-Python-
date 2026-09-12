@@ -81,3 +81,4 @@ print(grade.count("A"))
 gra=["A","B","C","D","F","A","B","A","A","D","A"]
 gra.sort()
 print(gra)
+list.
